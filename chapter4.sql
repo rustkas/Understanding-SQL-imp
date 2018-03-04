@@ -1,0 +1,13 @@
+SELECT * FROM Customers WHERE rating > 200;
+SELECT * FROM Customers WHERE city = 'San Jose' AND rating > 200;
+SELECT * FROM Customers WHERE city = 'San Jose' OR rating > 200;
+SELECT * FROM Customers WHERE city = 'San Jose' OR NOT rating > 200;
+SELECT * FROM Customers WHERE NOT city = 'San Jose' OR rating > 200;
+SELECT * FROM Customers WHERE NOT(city = 'San Jose' OR rating > 200);
+SELECT * FROM Orders WHERE NOT ((odate = '1990-03-10' AND snum > 1002) OR amt > 2000.00);
+SELECT * FROM Orders WHERE amt > 1000;
+SELECT sname, city FROM Salespeople WHERE city = 'London' AND comm > .10;
+SELECT * FROM Customers WHERE rating > 100 OR city = 'Rome';
+SELECT * FROM Customers WHERE NOT rating <= 100 OR city = 'Rome';
+SELECT * FROM Customers WHERE NOT (rating <= 100 AND city <> 'Rome');
+SELECT * FROM Salespeople;

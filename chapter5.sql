@@ -1,0 +1,20 @@
+SELECT * FROM Salespeople WHERE city = 'Barcelona' OR city = 'London';
+SELECT * FROM Salespeople WHERE city IN ('Barcelona', 'London');
+SELECT * FROM Customers WHERE snum IN (1001, 1007, 1004);
+SELECT * FROM Salespeople WHERE comm BETWEEN .10 AND .12;
+SELECT * FROM Salespeople WHERE (comm BETWEEN .10 AND .12) AND NOT comm IN (.10, .12);
+SELECT * FROM Customers WHERE cname BETWEEN 'A' AND 'G' OR cname LIKE 'G%';
+SELECT cname FROM Customers WHERE cname LIKE 'G%';
+SELECT * FROM Salespeople WHERE sname LIKE 'P__l%';
+SELECT * FROM Salespeople WHERE sname LIKE '%/_%'ESCAPE'/';
+SELECT * FROM Customers WHERE city IS NULL;
+SELECT * FROM Customers WHERE city IS NOT NULL;
+SELECT * FROM Salespeople WHERE city NOT IN ( 'London', 'San Jose' );
+SELECT * FROM Salespeople WHERE NOT city IN ('London', ' San Jose');
+
+SELECT * FROM Orders WHERE odate IN ('1990-03-10', '1990-04-10');
+SELECT * FROM Orders WHERE odate BETWEEN '1990-03-10' AND '1990-04-10';
+SELECT * FROM Customers WHERE snum IN (1001,1004);
+SELECT * FROM Customers WHERE cname BETWEEN 'A' AND 'H' OR cname LIKE 'H%';
+SELECT * FROM Orders WHERE amt <> 0 AND (amt IS NOT NULL);
+SELECT * FROM Orders WHERE NOT (amt = 0 OR amt IS NULL);
